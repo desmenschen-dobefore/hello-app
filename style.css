@@ -1,0 +1,99 @@
+:root {
+  --bg: #faf8f5;
+  --fg: #2b2b2b;
+  --muted: #6b6560;
+  --accent: #8a6a3d;
+  --line: #e4ded6;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1c1c1e;
+    --fg: #f2f2f2;
+    --muted: #a8a29b;
+    --accent: #d4b07a;
+    --line: #3a3a3c;
+  }
+}
+html, body {
+  margin: 0;
+}
+body {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+  line-height: 1.8;
+  word-break: keep-all;
+}
+a {
+  color: var(--accent);
+}
+
+/* 현관 */
+.entrance {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0 16px;
+  text-align: center;
+}
+.entrance h1 {
+  margin: 0;
+  font-size: clamp(1.75rem, 6vw, 3.5rem);
+  font-weight: 600;
+}
+.bridge {
+  max-width: 34rem;
+  margin: 0;
+  font-size: clamp(1.05rem, 2.6vw, 1.3rem);
+  color: var(--muted);
+}
+.rooms {
+  display: flex;
+  gap: 1rem;
+}
+.rooms a {
+  padding: 0.6rem 1.4rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+/* 방 */
+.room {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 3rem 16px 4rem;
+}
+.room nav {
+  margin-bottom: 2.5rem;
+  font-size: 0.95rem;
+}
+.room nav a {
+  text-decoration: none;
+}
+.room h1 {
+  margin: 0 0 0.25rem;
+  font-size: clamp(1.6rem, 5vw, 2.4rem);
+}
+.room .note {
+  margin: 0 0 2.5rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.room h2 {
+  margin: 2.5rem 0 0.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+  font-size: 1.2rem;
+}
+.room ul {
+  padding-left: 1.2rem;
+}
+.draft {
+  color: var(--muted);
+  font-style: italic;
+}
